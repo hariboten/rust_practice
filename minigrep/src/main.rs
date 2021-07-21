@@ -4,7 +4,6 @@ use std::io::prelude::*;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
-    println!("{:?}", args);
 
     let query = &args[1];
     let filename = &args[2];
@@ -17,6 +16,4 @@ fn main() {
     let mut contents = String::new();
     f.read_to_string(&mut contents)
         .expect("something went wrong reading file");
-
-    println!("With text:\n{}", contents);
 }
