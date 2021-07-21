@@ -23,7 +23,7 @@ fn main() {
 }
 
 fn run(config: Config) -> Result<(), Box<Error>> {
-    let mut f = File::open(config.filename).expect("file not found");
+    let mut f = File::open(config.filename)?;
 
     let mut contents = String::new();
     f.read_to_string(&mut contents)?;
